@@ -26,4 +26,6 @@ The system comprises:
 
 ## Project Status
 
-The project is currently under development. Refer to the project board for a detailed breakdown of tasks and progress updates. 
+The project is currently under development. Refer to this project board for a detailed breakdown of tasks and progress updates. 
+
+https://trello.com/b/KMyo9dgX/capstone-0-alarm-system
