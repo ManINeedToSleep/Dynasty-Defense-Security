@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New User</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="user-container">
+        <h1>Create New User</h1>
+
+        <!-- New User Form -->
+        <div id="new-user-form">
+            <label for="new-username">New Username:</label>
+            <input type="text" id="new-username" name="new-username" placeholder="Enter new username" required><br><br>
+
+            <label for="new-password">New Password:</label>
+            <input type="password" id="new-password" name="new-password" placeholder="Enter new password" required><br><br>
+
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm new password" required><br><br>
+
+            <label for="gmail">Gmail Address:</label>
+            <input type="email" id="gmail" name="gmail" placeholder="Enter your Gmail address" required><br><br>
+
+            <button type="button" onclick="createUser()">Create User</button>
+        </div>
+        
+        <p id="create-error" style="color: red;"></p>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

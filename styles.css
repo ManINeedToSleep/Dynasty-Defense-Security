@@ -1,0 +1,159 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0e0e0; /* Light grey background */
+    margin: 0;
+    padding: 0;
+}
+
+/* Login and User Creation Containers */
+.login-container, .user-container {
+    width: 300px;
+    margin: 100px auto;
+    background-color: #f5f5f5; /* Very light grey */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Title */
+h1 {
+    color: #333; /* Dark grey */
+    margin-bottom: 20px;
+}
+
+/* Input fields */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #fafafa; /* Very light grey */
+    border: 1px solid #ccc; /* Light grey borders */
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Button styling */
+button {
+    padding: 10px;
+    background-color: #666; /* Medium grey for button background */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #555; /* Darker grey on hover */
+}
+
+/* Error Message */
+#error-message, #create-error {
+    color: red;
+    margin-top: 10px;
+}
+
+/* Dashboard container styling */
+.dashboard-container {
+    width: 1000px;
+    height: auto;
+    margin: 100px auto;
+    margin-top: 20px;
+    padding: 25px;
+    background-color: #f5f5f5; /* Very light grey */
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Title text (remains above the boxes) */
+.dashboard-container h1 {
+    margin-bottom: 30px; /* Add some space below the title */
+    color: #333;
+}
+
+/* Flex container for the boxes */
+.sensor-management-container {
+    display: flex;  /* Arrange sensor and management boxes side by side */
+    justify-content: space-between; /* Ensure they are evenly spaced */
+    align-items: flex-start;  /* Align to the top */
+    margin-top: 20px; /* Space between title and boxes */
+}
+
+/* Sensor and Management Box Container (Combined) */
+.sensor-box-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Spacing between the boxes */
+    flex: 1; /* Take up equal space */
+}
+
+/* Management Box Styling */
+.management-box-container {
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Spacing between the boxes */
+    flex: 1; /* Take up equal space */
+    margin-left: 750px; /* Adds space between sensor and management boxes */
+}
+
+/* Individual Sensor Box Styling */
+.sensor-box {
+    width: 120px;
+    height: 120px;
+    background-color: #f5f5f5; /* Light grey background */
+    border: 2px solid #ccc; /* Light grey border */
+    border-radius: 15px; /* Round corners */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+    text-align: center;
+}
+
+/* Sensor Box Content */
+.sensor-box img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain; /* Ensures the image fits within the square */
+    margin-bottom: 10px;
+}
+
+.user-management-box p {
+    margin-top: 0px;
+}
+
+.user-management-box img {
+    margin-bottom: -10px;
+}
+
+.sensor-box p {
+    color: #333;
+    font-weight: bold;
+}
+
+/* Box Variants for different sensor types */
+.fire-box {
+    background-color: #ffcccc; /* Light red background for Fire */
+}
+
+.heat-box {
+    background-color: #ffebcc; /* Light orange background for Heat */
+}
+
+.smoke-box {
+    background-color: #e6e6e6; /* Light grey background for Smoke */
+}
+
+/* Specific Box Styles for User Management and Settings */
+.user-management-box {
+    background-color: #ccccff; /* Light blue background for User Management */
+}
+
+.settings-box {
+    background-color: #cce6ff; /* Light teal background for Settings */
+}

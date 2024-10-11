@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynasty Defense Alarm System - Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Dynasty Defense Alarm System</h1>
+        
+        <!-- Login Form -->
+        <div id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required><br><br>
+
+            <button type="button" onclick="login()">Login</button>
+        </div>
+        
+        <p id="login-error" style="color: red;"></p>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
