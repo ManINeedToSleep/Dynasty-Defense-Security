@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensor Control Panel</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Sensor Control Panel</h1> <!-- Page Title -->
+
+        <div class="sensor-control-container">
+            <!-- Sensor Information and Controls (Left Side) -->
+            <div class="sensor-info-boxes">
+                <!-- Sensor Type and Building Name -->
+                <div class="info-box-container">
+                    <div class="info-box sensor-box">
+                        <img id="sensor-logo" src="../Images/Fire_Alarm_Logo.png" alt="Sensor Logo" />
+                        <p id="sensor-type-text">Fire Sensor</p>
+                    </div>
+                    <input class="building-input" type="text" id="building-name" placeholder="Enter Building Name" />
+                </div>
+
+                <!-- Floor Box and Dropdown -->
+                <div class="info-box-container">
+                    <div class="info-box sensor-box">
+                        <img id="floor-logo" src="../Images/Floor_Logo.png" alt="Floor Logo" />
+                        <p>Floor</p>
+                    </div>
+                    <select id="floor-selector">
+                        <option>Add Box</option>
+                        <option>Floor 1</option>
+                        <option>Floor 2</option>
+                        <option>Floor 3</option>
+                    </select>
+                </div>
+
+                <!-- Sensor Box and Dropdown -->
+                <div class="info-box-container">
+                    <div class="info-box sensor-box">
+                        <img id="sensor-logo" src="../Images/Sensor_Logo.png" alt="Sensor Logo" />
+                        <p>Sensor</p>
+                    </div>
+                    <select id="sensor-selector">
+                        <option>Add Sensor</option>
+                        <option>Sensor 1</option>
+                        <option>Sensor 2</option>
+                        <option>Sensor 3</option>
+                    </select>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="sensor-actions">
+                    <button class="turn-on">Turn On</button>
+                    <button class="turn-off">Turn Off</button>
+                    <button class="configure" onclick="window.location.href='./configure-sensor-panel.html'">Configure</button>
+                </div>
+            </div>
+
+            <!-- Log Chat Space (Right Side) -->
+            <div class="log-chat">
+                <h3>Log Chat</h3>
+                <p>No recent logs available.</p>
+            </div>
+        </div>
+
+        <!-- Go Back Button at the Bottom -->
+        <button class="go-back-button">
+            <a href="../dashboard/dashboard.html">Go Back</a>
+        </button>    </div>
+</body>
+</html>

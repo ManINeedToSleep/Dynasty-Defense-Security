@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensor Configuration Panel</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../configuration.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Sensor Configuration Panel</h1> <!-- Page Title -->
+
+        <!-- Floors Management Section -->
+        <div class="config-section">
+            <h2>Manage Floors</h2>
+            <input type="text" id="floor-input" placeholder="Enter Floor Name" />
+            <button id="add-floor-button">Add Floor</button>
+            <ul id="floor-list" class="config-list"></ul> <!-- List of Floors -->
+        </div>
+
+        <div id="sensor-management" class="config-section">
+            <h2>Manage Sensors for <span id="selected-floor">Select a Floor</span></h2>
+            <select id="sensor-type-selector">
+                <option value="fire">Fire Sensor</option>
+                <option value="heat">Heat Sensor</option>
+                <option value="smoke">Smoke Sensor</option>
+            </select>
+            <input type="text" id="sensor-input" placeholder="Enter Sensor Name" />
+            <button id="add-sensor-button">Add Sensor</button>
+            <ul id="sensor-list" class="config-list"></ul> <!-- List of Sensors for Selected Floor -->
+        </div>
+
+        <!-- Go Back Button -->
+        <button class="go-back-button">
+            <a href="./sensor-control-panel.html">Go Back</a>
+        </button>
+    </div>
+    <script src="../scripts.js"></script>
+</body>
+</html>
