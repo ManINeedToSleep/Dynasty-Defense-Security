@@ -9,61 +9,39 @@
 </head>
 <body>
 <div class="dashboard-container">
-    <h1>Settings</h1>
-
-    <div class="settings-container">
-        <!-- Account Settings -->
-        <div class="settings-section">
-            <h2>Account Settings</h2>
-            <form id="account-settings-form">
-                <label for="username">Username:</label>
-                <input type="text" id="username" placeholder="Update Username" />
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" placeholder="Update Email" />
-
-                <label for="password">Password:</label>
-                <input type="password" id="password" placeholder="Update Password" />
-
-                <button type="submit">Save Changes</button>
-            </form>
+    <div class="settings-management">
+        <!-- Left Column -->
+        <div class="settings-left">
+            <div class="settings-section">
+                <h2>Account Settings</h2>
+                <form id="account-settings-form">
+                    <!-- Admin Profile Section -->
+                    <div class="admin-profile">
+                        <p><b>Username:</b> <span id="admin-username">Admin</span></p>
+                        <p><b>Email:</b> <span id="admin-email">admin@gmail.com</span></p>
+                        <p><b>Password:</b> <span id="admin-password">********</span></p>
+                    </div>
+                    <a class="go-back-button" href="../admin/create-user.html">Change User Info?</a>
+                </form>
+            </div>
         </div>
 
-        <hr>
+        <!-- Vertical Divider -->
+        <div class="divider"></div>
 
-        <!-- Preferences -->
-        <div class="settings-section">
-            <h2>Preferences</h2>
-            <label>
-                <input type="checkbox" id="dark-mode-toggle" />
-                Enable Dark Mode
-            </label>
-            <br />
-            <label for="language">Language:</label>
-            <select id="language">
-                <option value="en">English</option>
-                <option value="es">Spanish</option>
-                <option value="fr">French</option>
-            </select>
+        <!-- Right Column -->
+        <div class="settings-right">
+            <div class="settings-section">
+                <h2>Security Settings</h2>
+                <button id="logout-button">Logout</button>
+                <button id="reset-password-button">Reset Password</button>
+            </div>
         </div>
-
-        <hr>
-
-        <!-- Security Settings -->
-        <div class="settings-section">
-            <h2>Security Settings</h2>
-            <button id="logout-button">Logout</button>
-            <button id="reset-password-button">Reset Password</button>
-        </div>
-
-        <hr>
-
-        <!-- System Controls -->
-        <div class="settings-section">
-            <h2>System Controls</h2>
-            <button id="clear-cache-button">Clear Cache</button>
-            <button id="factory-reset-button">Factory Reset</button>
-        </div>
+    </div>
+    <div class="settings-section">
+        <h2>System Controls</h2>
+        <button id="clear-cache-button">Clear Cache</button>
+        <button id="factory-reset-button">Factory Reset</button>
     </div>
 
     <a class="go-back-button" href="../dashboard/dashboard.html">Go Back</a>

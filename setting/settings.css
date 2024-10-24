@@ -1,8 +1,21 @@
-.settings-container {
+button {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+.settings-management {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.settings-left, .settings-right {
+    width: 45%; /* Ensure equal space for both columns */
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 20px;
 }
 
 .settings-section {
@@ -12,25 +25,38 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.settings-section h2 {
-    margin-bottom: 10px;
+.divider {
+    width: 1px;
+    background-color: #ddd;
+    height: 100%; /* Match the height of the content */
+    margin: 0 20px;
 }
 
 .go-back-button {
     margin-top: 20px;
-    display: inline-block;
     padding: 10px 20px;
     background-color: #4caf50;
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    text-align: center;
 }
 
 .go-back-button:hover {
     background-color: #45a049;
 }
 
-.dark-mode {
-    background-color: #333;
-    color: white;
+/* Responsive: Switch to single column layout on small screens */
+@media (max-width: 768px) {
+    .settings-management {
+        flex-direction: column;
+    }
+
+    .divider {
+        display: none; /* Hide divider on small screens */
+    }
+
+    .settings-left, .settings-right {
+        width: 100%; /* Take full width on smaller screens */
+    }
 }

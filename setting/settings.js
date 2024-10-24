@@ -1,35 +1,18 @@
-// Handle Account Settings Form Submission
-document.getElementById('account-settings-form').addEventListener('submit', (e) => {
-    e.preventDefault(); // Prevent page reload
+// Load Admin Data from localStorage
+function loadAdminData() {
+    const adminData = JSON.parse(localStorage.getItem('admin')) || {
+        username: 'Admin',
+        password: '********',
+        email: 'admin@gmail.com'
+    };
 
-    const username = document.getElementById('username').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const password = document.getElementById('password').value.trim();
-
-    if (username && email && password) {
-        const updatedAccount = { username, email, password };
-        localStorage.setItem('account', JSON.stringify(updatedAccount)); // Save to localStorage
-        alert('Account updated successfully!');
-    }
-});
-
-// Handle Dark Mode Toggle
-const darkModeToggle = document.getElementById('dark-mode-toggle');
-darkModeToggle.addEventListener('change', () => {
-    document.body.classList.toggle('dark-mode', darkModeToggle.checked);
-    localStorage.setItem('darkMode', darkModeToggle.checked);
-});
-
-// Set Initial Dark Mode State
-if (JSON.parse(localStorage.getItem('darkMode'))) {
-    document.body.classList.add('dark-mode');
-    darkModeToggle.checked = true;
+    document.getElementById('admin-username').textContent = adminData.username;
+    document.getElementById('admin-email').textContent = adminData.email;
+    document.getElementById('admin-password').textContent = adminData.password;
 }
 
-// Handle Language Change
-document.getElementById('language').addEventListener('change', (e) => {
-    alert(`Language changed to: ${e.target.value}`);
-});
+// Call the function on page load
+document.addEventListener('DOMContentLoaded', loadAdminData);
 
 // Logout Button
 document.getElementById('logout-button').addEventListener('click', () => {
@@ -52,3 +35,4 @@ document.getElementById('factory-reset-button').addEventListener('click', () => 
         window.location.href = '../index.html';
     }
 });
+
