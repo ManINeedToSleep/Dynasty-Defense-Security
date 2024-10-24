@@ -2,7 +2,7 @@ let guests = JSON.parse(localStorage.getItem('guests')) || [];
 
 // Load Admin Data from localStorage
 function loadAdminData() {
-    const adminData = JSON.parse(localStorage.getItem('newUser')) || {
+    const adminData = JSON.parse(localStorage.getItem('admin')) || {
         username: 'Admin',
         password: '********',
         email: 'admin@gmail.com'
@@ -12,6 +12,10 @@ function loadAdminData() {
     document.getElementById('admin-email').textContent = adminData.email;
     document.getElementById('admin-password').textContent = adminData.password;
 }
+
+// Call the function on page load
+document.addEventListener('DOMContentLoaded', loadAdminData);
+
 
 // Update Guest/User List
 function updateGuestList() {

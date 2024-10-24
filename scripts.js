@@ -4,21 +4,19 @@ const masterPassword = "S3cur3#AlarmSy$tem";
 
 // Function to handle login
 function login() {
-    const username = document.getElementById("username").value.trim(); // Trim spaces
-    const password = document.getElementById("password").value.trim(); // Trim spaces
+    const username = document.getElementById("username").value.trim();
+    const password = document.getElementById("password").value.trim();
 
-    // Log the values to the console for debugging purposes (optional)
     console.log("Entered Username:", username);
     console.log("Entered Password:", password);
 
-    // Retrieve new user data from local storage
-    const storedUser = JSON.parse(localStorage.getItem("newUser"));
+    // Retrieve admin data from local storage
+    const storedAdmin = JSON.parse(localStorage.getItem("admin"));
 
-    // If no new user is created, default to master credentials
-    const validUsername = storedUser ? storedUser.username : masterUsername;
-    const validPassword = storedUser ? storedUser.password : masterPassword;
+    // Use the master credentials if no new user is created
+    const validUsername = storedAdmin ? storedAdmin.username : masterUsername;
+    const validPassword = storedAdmin ? storedAdmin.password : masterPassword;
 
-    // Log the valid credentials for debugging purposes
     console.log("Valid Username:", validUsername);
     console.log("Valid Password:", validPassword);
 
@@ -34,37 +32,38 @@ function login() {
 
 // Function to handle new user creation
 function createUser() {
-    const newUsername = document.getElementById("new-username").value;
-    const newPassword = document.getElementById("new-password").value;
-    const confirmPassword = document.getElementById("confirm-password").value;
-    const gmail = document.getElementById("gmail").value;
+    const newUsername = document.getElementById("new-username").value.trim();
+    const newPassword = document.getElementById("new-password").value.trim();
+    const confirmPassword = document.getElementById("confirm-password").value.trim();
+    const gmail = document.getElementById("gmail").value.trim();
 
-    // Password validation
     if (newPassword !== confirmPassword) {
         document.getElementById("create-error").textContent = "Passwords do not match!";
         return;
     }
+
     if (newPassword.length < 16 || !/[A-Z]/.test(newPassword) || !/[!@#$%^&*]/.test(newPassword)) {
-        document.getElementById("create-error").textContent = "Password must be at least 16 characters long and contain at least one capital letter and one special character.";
+        document.getElementById("create-error").textContent = 
+            "Password must be at least 16 characters long, with one capital letter and one special character.";
         return;
     }
 
-    // Gmail validation
     const gmailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
     if (!gmailPattern.test(gmail)) {
         document.getElementById("create-error").textContent = "Please enter a valid Gmail address.";
         return;
     }
 
-    // Save the new user details to local storage
     const newUser = {
         username: newUsername,
         password: newPassword,
         email: gmail
     };
 
-    // Save admin data to local storage
+    // Save new admin details to localStorage
     localStorage.setItem("admin", JSON.stringify(newUser));
+
+    alert("New user created successfully!");
 
     const regex = /admin\//gm;
 
