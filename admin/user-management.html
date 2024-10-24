@@ -5,10 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Management</title>
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="user-management.css">    
 </head>
 <body>
 <div class="dashboard-container">
+    <div class="user-management">
+        <!-- Admin Profile Section -->
+        <div class="admin-profile">
+            <h2>Admin Profile</h2>
+            <p><b>Username:</b> <span id="admin-username">Admin</span></p>
+            <p><b>Email:</b> <span id="admin-email">admin@gmail.com</span></p>
+            <p><b>Password:</b> <span id="admin-password">********</span></p>
+        </div>
 
+        <!-- Vertical Divider -->
+        <div class="divider"></div>
+
+        <!-- Guest User Management Section -->
+        <div class="guest-users">
+            <h2>Add User</h2>
+            <form id="guest-user-form">
+                <input type="text" id="guest-username" placeholder="Enter Username" required />
+                <input type="email" id="guest-email" placeholder="Enter Email" required />
+                <input type="password" id="guest-password" placeholder="Enter Password" required />
+                <select id="user-role" required>
+                    <option value="guest">Guest</option>
+                    <option value="admin">Admin</option>
+                </select>
+                <button type="submit">Add User</button>
+            </form>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Guest User List Section -->
+    <div class="guest-list">
+        <h3>User List</h3>
+        <ul id="guest-user-list">
+            <!-- Users will be dynamically listed here -->
+        </ul>
+    </div>
+
+    <a class="go-back-button" href="../dashboard/dashboard.html">Go Back</a>
 </div>
+<script src="../scripts.js"></script>
+<script src="user-management.js"></script>
 </body>
 </html>

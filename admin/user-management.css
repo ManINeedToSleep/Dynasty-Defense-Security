@@ -1,0 +1,76 @@
+/* User Management Layout */
+.user-management {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Admin Profile Section */
+.admin-profile {
+    flex: 1;
+    max-width: 45%;
+    padding: 10px;
+    border-right: 2px solid #ddd;
+}
+
+/* Guest User Management Section */
+.guest-users {
+    flex: 1;
+    max-width: 45%;
+    padding: 10px;
+}
+
+/* Guest List Section Below Both */
+.guest-list {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.guest-list h3 {
+    margin-bottom: 10px;
+}
+
+#guest-user-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+#guest-user-list li {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#guest-user-list button {
+    margin-left: 10px;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+/* Divider Styling */
+.divider {
+    width: 2px;
+    background-color: #ddd;
+    margin: 0 10px;
+}
+
+.guest-users form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.guest-list ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}

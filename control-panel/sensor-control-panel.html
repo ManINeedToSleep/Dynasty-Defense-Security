@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="dashboard-container">
-        <h1>Sensor Control Panel</h1> <!-- Page Title -->
+        <h1>Sensor Control Panel</h1>
 
         <div class="sensor-control-container">
             <!-- Sensor Information and Controls (Left Side) -->
@@ -16,8 +16,8 @@
                 <!-- Sensor Type and Building Name -->
                 <div class="info-box-container">
                     <div class="info-box sensor-box">
-                        <img id="sensor-logo" src="../Images/Fire_Alarm_Logo.png" alt="Sensor Logo" />
-                        <p id="sensor-type-text">Fire Sensor</p>
+                        <img id="building-logo" src="../Images/Building Logo.png" alt="Building Logo" />
+                        <p id="sensor-type-text">Building</p>
                     </div>
                     <input class="building-input" type="text" id="building-name" placeholder="Enter Building Name" />
                 </div>
@@ -29,10 +29,7 @@
                         <p>Floor</p>
                     </div>
                     <select id="floor-selector">
-                        <option>Add Box</option>
-                        <option>Floor 1</option>
-                        <option>Floor 2</option>
-                        <option>Floor 3</option>
+                        <option>Select Floor</option>
                     </select>
                 </div>
 
@@ -43,10 +40,7 @@
                         <p>Sensor</p>
                     </div>
                     <select id="sensor-selector">
-                        <option>Add Sensor</option>
-                        <option>Sensor 1</option>
-                        <option>Sensor 2</option>
-                        <option>Sensor 3</option>
+                        <option>Select Sensor</option>
                     </select>
                 </div>
 
@@ -55,19 +49,40 @@
                     <button class="turn-on">Turn On</button>
                     <button class="turn-off">Turn Off</button>
                     <button class="configure" onclick="window.location.href='./configure-sensor-panel.html'">Configure</button>
+                    <button id="check-status-button">Check Status</button>
+                    <button id="clear-logs-button">Clear Logs</button>
                 </div>
             </div>
 
-            <!-- Log Chat Space (Right Side) -->
+            <!-- Logs -->
             <div class="log-chat">
-                <h3>Log Chat</h3>
                 <p>No recent logs available.</p>
             </div>
+            
         </div>
 
         <!-- Go Back Button at the Bottom -->
-        <button class="go-back-button">
-            <a href="../dashboard/dashboard.html">Go Back</a>
-        </button>    </div>
+        <a class="go-back-button" href="../dashboard/dashboard.html">Go Back</a>
+    </div>
+
+    <script src="../scripts.js"></script>
+    <script>
+        // Save building name to localStorage when the input changes
+        document.getElementById('building-name').addEventListener('input', function() {
+            localStorage.setItem('buildingName', this.value.trim());
+        });
+
+        // Load building name from localStorage when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedBuildingName = localStorage.getItem('buildingName');
+            if (savedBuildingName) {
+                document.getElementById('building-name').value = savedBuildingName;
+            }
+        });
+        // Event listeners for the buttons
+        document.getElementById('check-status-button').addEventListener('click', checkSensorStatus);
+        document.getElementById('clear-logs-button').addEventListener('click', clearLogs);
+
+    </script>
 </body>
 </html>

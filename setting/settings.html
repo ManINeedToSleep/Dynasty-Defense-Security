@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+<div class="dashboard-container">
+    <h1>Settings</h1>
+
+    <div class="settings-container">
+        <!-- Account Settings -->
+        <div class="settings-section">
+            <h2>Account Settings</h2>
+            <form id="account-settings-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="Update Username" />
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Update Email" />
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Update Password" />
+
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+
+        <hr>
+
+        <!-- Preferences -->
+        <div class="settings-section">
+            <h2>Preferences</h2>
+            <label>
+                <input type="checkbox" id="dark-mode-toggle" />
+                Enable Dark Mode
+            </label>
+            <br />
+            <label for="language">Language:</label>
+            <select id="language">
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+            </select>
+        </div>
+
+        <hr>
+
+        <!-- Security Settings -->
+        <div class="settings-section">
+            <h2>Security Settings</h2>
+            <button id="logout-button">Logout</button>
+            <button id="reset-password-button">Reset Password</button>
+        </div>
+
+        <hr>
+
+        <!-- System Controls -->
+        <div class="settings-section">
+            <h2>System Controls</h2>
+            <button id="clear-cache-button">Clear Cache</button>
+            <button id="factory-reset-button">Factory Reset</button>
+        </div>
+    </div>
+
+    <a class="go-back-button" href="../dashboard/dashboard.html">Go Back</a>
+</div>
+
+<script src="../scripts.js"></script>
+<script src="settings.js"></script>
+</body>
+</html>

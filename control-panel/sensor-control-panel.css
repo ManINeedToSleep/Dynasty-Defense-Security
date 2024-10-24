@@ -1,0 +1,38 @@
+.button-container, .status-controls {
+    display: flex; /* Align buttons in a row */
+    justify-content: space-around; /* Distribute space evenly */
+    margin-top: 10px; /* Space above the button section */
+}
+
+.status-controls {
+    margin-top: 20px; /* Add space below the logs */
+}
+
+/* Optional: Style buttons for consistency */
+.button-container button, .status-controls button {
+    padding: 10px 15px; /* Adjust padding for buttons */
+    font-size: 16px; /* Consistent font size */
+    cursor: pointer; /* Show pointer on hover */
+    border: none; /* Remove default button borders */
+    border-radius: 5px; /* Slightly round button corners */
+    background-color: #007BFF; /* Primary button color */
+    color: white; /* Button text color */
+}
+
+.button-container button:hover, .status-controls button:hover {
+    background-color: #0056b3; /* Darken on hover */
+}
+
+.sensor-container {
+    display: flex; /* Align dropdown and circle in a row */
+    align-items: center; /* Center align the items */
+    margin-top: 10px; /* Space above the sensor dropdown */
+}
+
+.sensor-status-circle {
+    width: 20px; /* Diameter of the circle */
+    height: 20px; /* Diameter of the circle */
+    border-radius: 50%; /* Make it a circle */
+    margin-left: 10px; /* Space between dropdown and circle */
+    background-color: red; /* Default to red (off) */
+}
