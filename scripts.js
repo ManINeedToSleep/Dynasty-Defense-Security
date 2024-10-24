@@ -7,8 +7,8 @@ function login() {
     const username = document.getElementById("username").value.trim();
     const password = document.getElementById("password").value.trim();
 
-    console.log("Entered Username:", username);
-    console.log("Entered Password:", password);
+    //console.log("Entered Username:", username);
+    //console.log("Entered Password:", password);
 
     // Retrieve admin data from local storage
     const storedAdmin = JSON.parse(localStorage.getItem("admin"));
@@ -17,8 +17,8 @@ function login() {
     const validUsername = storedAdmin ? storedAdmin.username : masterUsername;
     const validPassword = storedAdmin ? storedAdmin.password : masterPassword;
 
-    console.log("Valid Username:", validUsername);
-    console.log("Valid Password:", validPassword);
+    //console.log("Valid Username:", validUsername);
+    //console.log("Valid Password:", validPassword);
 
     // Check if the entered username and password match the stored credentials
     if (username === validUsername && password === validPassword) {
@@ -72,7 +72,7 @@ function createUser() {
 
     // The substituted value will be contained in the result variable
     window.location.href= url.replace(regex, subst);
-    console.log(url.replace(regex, subst))
+    //console.log(url.replace(regex, subst))
     alert("New user created successfully!");
 
 
